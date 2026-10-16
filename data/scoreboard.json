@@ -1,0 +1,27 @@
+{
+  "as_of": "2026-10-16",
+  "version": "V3",
+  "score": 64,
+  "status": "WATCH",
+  "pillars": [
+    {"name":"AI Demand","score":22},
+    {"name":"CapEx Intensity","score":78},
+    {"name":"FCF Conversion","score":76},
+    {"name":"Credit / Leverage","score":82},
+    {"name":"Profitability","score":42}
+  ],
+  "fundamentals": [
+    {"ticker":"MSFT","company":"Microsoft","period":"FY26 Q4","revenue_b":90.0,"revenue_yoy":18,"ai_metric":"Azure +43%","ocf_b":55.4,"fcf_b":19.6,"capex_b":35.8,"risk":38},
+    {"ticker":"AMZN","company":"Amazon","period":"2026 Q2 / TTM CF","revenue_b":200.6,"revenue_yoy":20,"ai_metric":"AWS +37%","ocf_b":161.4,"fcf_b":-7.6,"capex_b":169.0,"risk":76},
+    {"ticker":"META","company":"Meta","period":"2026 Q2","revenue_b":60.8,"revenue_yoy":28,"ai_metric":"AI ads/products","ocf_b":31.86,"fcf_b":0.784,"capex_b":31.08,"risk":73},
+    {"ticker":"CRWV","company":"CoreWeave","period":"2026 Q2","revenue_b":2.575,"revenue_yoy":112,"ai_metric":"Backlog ~$104B","ocf_b":null,"fcf_b":null,"capex_b":null,"risk":91,"interest_b":0.64,"net_income_b":-0.626}
+  ],
+  "market": [],
+  "history": [{"date":"2026-10-15","score":62},{"date":"2026-10-16","score":64}],
+  "sources": [
+    {"name":"Microsoft FY26 Q4","url":"https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast"},
+    {"name":"Amazon Q2 2026","url":"https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx"},
+    {"name":"Meta Q2 2026","url":"https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/"},
+    {"name":"CoreWeave Q2 2026","url":"https://investors.coreweave.com/financials/quarterly-results/"}
+  ]
+}
