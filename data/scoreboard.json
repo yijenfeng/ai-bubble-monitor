@@ -30,7 +30,7 @@
       "ticker": "MSFT",
       "company": "Microsoft",
       "period": "FY26 Q4",
-      "revenue_b": 90.0,
+      "revenue_b": 90,
       "revenue_yoy": 18,
       "ai_metric": "Azure +43%",
       "ocf_b": 55.4,
@@ -47,7 +47,7 @@
       "ai_metric": "AWS +37%",
       "ocf_b": 161.4,
       "fcf_b": -7.6,
-      "capex_b": 169.0,
+      "capex_b": 169,
       "risk": 76
     },
     {
@@ -80,57 +80,57 @@
   "market": [
     {
       "ticker": "QQQ",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "SOXX",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "NVDA",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "MSFT",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "AMZN",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "GOOGL",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "META",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "CRWV",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "NBIS",
-      "price": NaN,
-      "day_pct": NaN,
-      "drawdown_52w_pct": NaN
+      "price": null,
+      "day_pct": null,
+      "drawdown_52w_pct": null
     },
     {
       "ticker": "^TNX",
