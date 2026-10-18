@@ -75,6 +75,48 @@
       "risk": 91,
       "interest_b": 0.64,
       "net_income_b": -0.626
+    },
+    {
+      "ticker": "GOOGL",
+      "company": "Alphabet / Google",
+      "period": "2026 Q2",
+      "revenue_b": 119.796,
+      "revenue_yoy": 24,
+      "ai_metric": "Google Cloud $24.768B · +82%",
+      "ocf_b": 39.069,
+      "fcf_b": -5.855,
+      "capex_b": 44.924,
+      "risk": null,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+      "cash_flow_note": "單季；FCF = OCF − CapEx"
+    },
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "period": "FY27 Q2 · ended 2026-07-26",
+      "revenue_b": 96.221,
+      "revenue_yoy": 106,
+      "ai_metric": "Data Center $89.0B · +117%",
+      "ocf_b": 24.077,
+      "fcf_b": 21.341,
+      "capex_b": 2.677,
+      "risk": null,
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/",
+      "cash_flow_note": "單季；FCF 另扣 $0.059B 設備及無形資產本金付款"
+    },
+    {
+      "ticker": "ORCL",
+      "company": "Oracle",
+      "period": "FY27 Q1 · ended 2026-08-31",
+      "revenue_b": 19.3,
+      "revenue_yoy": 30,
+      "ai_metric": "OCI $7.4B · +121%; RPO $664B",
+      "ocf_b": 23.103,
+      "fcf_b": -5.396,
+      "capex_b": 28.499,
+      "risk": null,
+      "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+      "cash_flow_note": "單季；OCF 含 $11.363B 客戶預付款（具重大融資成分）"
     }
   ],
   "market": [
@@ -104,7 +146,7 @@
     },
     {
       "ticker": "AMZN",
-      "price": 250.0,
+      "price": 250,
       "day_pct": -1.87,
       "drawdown_52w_pct": -11.98
     },
@@ -173,6 +215,18 @@
     {
       "name": "CoreWeave Q2 2026",
       "url": "https://investors.coreweave.com/financials/quarterly-results/"
+    },
+    {
+      "name": "Alphabet Q2 2026 · SEC earnings release",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm"
+    },
+    {
+      "name": "NVIDIA FY27 Q2 · earnings release",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/"
+    },
+    {
+      "name": "Oracle FY27 Q1 · earnings release",
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
     }
   ],
   "market_updated_utc": "2026-10-18T03:59:24.093740+00:00"
