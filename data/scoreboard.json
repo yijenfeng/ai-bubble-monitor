@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-18",
   "version": "V3",
   "score": 64,
   "status": "WATCH",
@@ -80,57 +80,57 @@
   "market": [
     {
       "ticker": "QQQ",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 709.8,
+      "day_pct": -2.5,
+      "drawdown_52w_pct": -6.56
     },
     {
       "ticker": "SOXX",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 493.39,
+      "day_pct": -4.14,
+      "drawdown_52w_pct": -24.67
     },
     {
       "ticker": "NVDA",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 214.13,
+      "day_pct": -1.43,
+      "drawdown_52w_pct": -10.5
     },
     {
       "ticker": "MSFT",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 529.05,
+      "day_pct": -1.93,
+      "drawdown_52w_pct": -2.65
     },
     {
       "ticker": "AMZN",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 250.0,
+      "day_pct": -1.87,
+      "drawdown_52w_pct": -11.98
     },
     {
       "ticker": "GOOGL",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 340.59,
+      "day_pct": -2.47,
+      "drawdown_52w_pct": -15.41
     },
     {
       "ticker": "META",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 709.33,
+      "day_pct": -3.72,
+      "drawdown_52w_pct": -8.78
     },
     {
       "ticker": "CRWV",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 61.39,
+      "day_pct": -11.91,
+      "drawdown_52w_pct": -56.13
     },
     {
       "ticker": "NBIS",
-      "price": null,
-      "day_pct": null,
-      "drawdown_52w_pct": null
+      "price": 165.47,
+      "day_pct": -12.18,
+      "drawdown_52w_pct": -42.28
     },
     {
       "ticker": "^TNX",
@@ -150,6 +150,10 @@
     },
     {
       "date": "2026-10-17",
+      "score": 64
+    },
+    {
+      "date": "2026-10-18",
       "score": 64
     }
   ],
@@ -171,5 +175,5 @@
       "url": "https://investors.coreweave.com/financials/quarterly-results/"
     }
   ],
-  "market_updated_utc": "2026-10-17T00:41:56.636379+00:00"
+  "market_updated_utc": "2026-10-18T03:59:24.093740+00:00"
 }
