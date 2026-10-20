@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-18",
+  "as_of": "2026-10-20",
   "version": "V3",
   "score": 64,
   "status": "WATCH",
@@ -146,7 +146,7 @@
     },
     {
       "ticker": "AMZN",
-      "price": 250,
+      "price": 250.0,
       "day_pct": -1.87,
       "drawdown_52w_pct": -11.98
     },
@@ -176,9 +176,9 @@
     },
     {
       "ticker": "^TNX",
-      "price": 5.1,
-      "day_pct": 0.18,
-      "drawdown_52w_pct": -4.01
+      "price": 5.14,
+      "day_pct": 0.75,
+      "drawdown_52w_pct": -3.3
     }
   ],
   "history": [
@@ -196,6 +196,10 @@
     },
     {
       "date": "2026-10-18",
+      "score": 64
+    },
+    {
+      "date": "2026-10-20",
       "score": 64
     }
   ],
@@ -229,5 +233,5 @@
       "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
     }
   ],
-  "market_updated_utc": "2026-10-18T03:59:24.093740+00:00"
+  "market_updated_utc": "2026-10-20T01:09:51.756304+00:00"
 }
