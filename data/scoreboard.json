@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-20",
+  "as_of": "2026-10-21",
   "version": "V3",
   "score": 64,
   "status": "WATCH",
@@ -122,63 +122,63 @@
   "market": [
     {
       "ticker": "QQQ",
-      "price": 709.8,
-      "day_pct": -2.5,
-      "drawdown_52w_pct": -6.56
+      "price": 718.36,
+      "day_pct": 1.21,
+      "drawdown_52w_pct": -5.44
     },
     {
       "ticker": "SOXX",
-      "price": 493.39,
-      "day_pct": -4.14,
-      "drawdown_52w_pct": -24.67
+      "price": 501.93,
+      "day_pct": 1.73,
+      "drawdown_52w_pct": -23.37
     },
     {
       "ticker": "NVDA",
-      "price": 214.13,
-      "day_pct": -1.43,
-      "drawdown_52w_pct": -10.5
+      "price": 217.09,
+      "day_pct": 1.38,
+      "drawdown_52w_pct": -9.26
     },
     {
       "ticker": "MSFT",
-      "price": 529.05,
-      "day_pct": -1.93,
-      "drawdown_52w_pct": -2.65
+      "price": 533.52,
+      "day_pct": 0.84,
+      "drawdown_52w_pct": -1.83
     },
     {
       "ticker": "AMZN",
-      "price": 250.0,
-      "day_pct": -1.87,
-      "drawdown_52w_pct": -11.98
+      "price": 262.45,
+      "day_pct": 4.98,
+      "drawdown_52w_pct": -7.59
     },
     {
       "ticker": "GOOGL",
-      "price": 340.59,
-      "day_pct": -2.47,
-      "drawdown_52w_pct": -15.41
+      "price": 344.18,
+      "day_pct": 1.05,
+      "drawdown_52w_pct": -14.51
     },
     {
       "ticker": "META",
-      "price": 709.33,
-      "day_pct": -3.72,
-      "drawdown_52w_pct": -8.78
+      "price": 705.44,
+      "day_pct": -0.55,
+      "drawdown_52w_pct": -9.28
     },
     {
       "ticker": "CRWV",
-      "price": 61.39,
-      "day_pct": -11.91,
-      "drawdown_52w_pct": -56.13
+      "price": 61.12,
+      "day_pct": -0.44,
+      "drawdown_52w_pct": -56.32
     },
     {
       "ticker": "NBIS",
-      "price": 165.47,
-      "day_pct": -12.18,
-      "drawdown_52w_pct": -42.28
+      "price": 170.24,
+      "day_pct": 2.88,
+      "drawdown_52w_pct": -40.62
     },
     {
       "ticker": "^TNX",
-      "price": 5.14,
-      "day_pct": 0.75,
-      "drawdown_52w_pct": -3.3
+      "price": 5.12,
+      "day_pct": -0.37,
+      "drawdown_52w_pct": -3.65
     }
   ],
   "history": [
@@ -200,6 +200,10 @@
     },
     {
       "date": "2026-10-20",
+      "score": 64
+    },
+    {
+      "date": "2026-10-21",
       "score": 64
     }
   ],
@@ -233,5 +237,5 @@
       "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
     }
   ],
-  "market_updated_utc": "2026-10-20T01:09:51.756304+00:00"
+  "market_updated_utc": "2026-10-21T00:47:29.207746+00:00"
 }
