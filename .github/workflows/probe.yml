@@ -2,11 +2,15 @@ name: Probe data sources
 on:
   push:
     branches: [probe-sources]
+permissions:
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
+          exec > probe-result.txt 2>&1
           for u in \
             "https://www.thetrading.tools/data/indicators/shiller-cape.csv" \
             "https://shillerdata.com/" \
@@ -22,3 +26,9 @@ jobs:
             code=$(curl -sS -L -m 30 -o /tmp/out -w "%{http_code}" "$u" || echo ERR)
             echo "== $code $(wc -c </tmp/out) $u"; head -c 400 /tmp/out | tr -d '\0' | head -5; echo
           done
+      - run: |
+          git config user.name probe-bot
+          git config user.email actions@users.noreply.github.com
+          git add probe-result.txt
+          git commit -m "probe result"
+          git push
