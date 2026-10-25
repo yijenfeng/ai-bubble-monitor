@@ -1,46 +1,134 @@
-== 200 151314 https://www.thetrading.tools/data/indicators/shiller-cape.csv
-date,cape_value,tr_cape,ecy,added_date,release_date,sp_price,dividend,cpi,earnings,long_rate
-1881-01-01,18.474,24.1351,-1.0489,2026-07-12,1881-02-01,6.19,0.265,9.41942,0.4858,3.7
-1881-02-01,18.1473,23.6555,-1.1393,2026-07-12,1881-03-01,6.17,0.27,9.514585,0.4817,3.6933
-1881-03-01,18.2701,23.7677,-1.3123,2026-07-12,1881-04-01,6.24,0.275,9.514585,0.4775,3.6867
-1881-04-01,17.9501,23.3089,-0.7504,2026-
-== 200 121558 https://shillerdata.com/
-<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Shiller</title><meta name="description" content="Access comprehensive Shiller data including CAPE and P/E ratios from Robert Shiller for informed financial insights."/><meta name="author" content="Shiller"/>
-== 200 1628672 http://www.econ.yale.edu/~shiller/data/ie_data.xls
-��ࡱ�>��	k��������RSTUVWXYZ[\]^_`abcdefghij��������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������
-== 200 1623552 https://img1.wsimg.com/blobby/go/e5e77e0b-59d1-44d9-ab25-4763ac982e53/downloads/ie_data.xls
-��ࡱ�>��	^����b�d�f�h�j�l�n�p�r�t	�	v
-�
-x���������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������
-== 200 17763 https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL
-observation_date,CPIAUCSL
-1947-01-01,21.480
-1947-02-01,21.620
-1947-03-01,22.000
-1947-04-01,22.000
+== 404 458 https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.TW.P.A.C/all?format=csv
+<?xml version="1.0" ?>
+<message:Error xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:ErrorMessage code="100">
+    <com:Text>No data for data query against the dataflow: urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=BIS:WS_CREDIT_GAP(1.0)</com:Text>
+  </message:ErrorMessage>
+</message:Error>
+essage" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <message:ErrorMessage code="100">
+    <com:Text>No data for data query against the dataflow: urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=BIS:WS_CREDIT_GAP(1.0)</com:Text>
+  </message:ErrorMessage>
+</message:Error>
+== 200 12391 https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.B/all?format=csv
+FREQ,BORROWERS_CTY,TC_BORROWERS,TC_LENDERS,CG_DTYPE,COLLECTION,DECIMALS,UNIT_MEASURE,UNIT_MULT,TIME_FORMAT,TITLE_TS,TIME_PERIOD,OBS_VALUE,OBS_STATUS,OBS_CONF,OBS_PRE_BREAK
+Q,US,P,A,B,E,1,770,0,,,1957-Q4,68.75,A,F,
+Q,US,P,A,B,E,1,770,0,,,1958-Q1,69.3511,A,F,
+Q,US,P,A,B,E,1,770,0,,,1958-Q2,70.0103,A,F,
+Q,US,P,A,B,E,1,770,0,,,1958-Q3,70.6963,A,F,
+Q,US,P,A,B,E,1,770,0,,,1958-Q4,71.4302,A,F,
+Q,US,P,A,B,E,1,770,0,,,1959-Q1,72.0454,A,F,
+Q,US,P,A,B,E,1,770,0,,,1959-Q2,72.6629,A,F,
+Q,US,P,A,B,E,1,770,0,,,1959-Q3,73.2538,A,F,
+Q,US,P,A,B,E,1,770,0,,,1959-Q4,73.887,A,F,
+Q,US,P,A,B,E,1,770,0,,,1960-Q1,74.441,A,F,
+Q,US,P,A,B,E,1,770,0,,,1960-Q2,75.0661,A,F,
+Q,US,P,A,B,E,1,770,0,,,1960-Q3,75.6772,A,F,
+Q,US,P,A,B,E,1,770,0,,,1960-Q4,76.3481,A,F,
+Q,US,P,A,B,E,1,770,0,,,1961-Q1,76.9986,A,F,
+Q,US,P,A,B,E,1,770,0,,,1961-Q2,77.7,A,F,
+Q,US,P,A,B,E,1,770,0,,,1961-Q3,78.384,A,F,
+Q,US,P,A,B,E,1,770,0,,,1961-Q4,7
+770,0,,,2024-Q3,155.7584,A,F,
+Q,US,P,A,B,E,1,770,0,,,2024-Q4,154.9918,A,F,
+Q,US,P,A,B,E,1,770,0,,,2025-Q1,154.1968,A,F,
+Q,US,P,A,B,E,1,770,0,,,2025-Q2,153.3952,A,F,
+Q,US,P,A,B,E,1,770,0,,,2025-Q3,152.5946,A,F,
+Q,US,P,A,B,E,1,770,0,,,2025-Q4,151.7983,A,F,
+Q,US,P,A,B,E,1,770,0,,,2026-Q1,150.9985,A,F,
 
+== 200 1851 https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?date=20261022&selectType=MS&response=json
+{"stat":"OK","date":"20261022","tables":[{"title":"115年10月22日 信用交易統計","fields":["項目","買進","賣出","現金(券)償還","前日餘額","今日餘額"],"data":[["融資(交易單位)","350,036","362,918","15,043","9,632,327","9,604,402"],["融券(交易單位)","19,022","43,724","761","192,598","216,539"],["融資金額(仟元)","25,008,207","33,058,284","2,443,373","644,373,624","633,880,174"]],"notes":["本公司市場融資融券餘額的資料來源係為各授信機構(含證金公司及自辦信用交易證券商)，待各授信機構整體作業結束且傳輸完成，復經本公司彙整後於當日晚間即時公布於本公司網站。前述作業程序或因當日市場成交量值多寡，或因各授信機構傳輸過程順遂與否、更帳次數及作業時間長短等因素，均將影響本公司完成本表時間。","由於各授信機構於該
+頁右上角會呈現點選框，屆時請點選明細查詢，另外，歷史資料也可點選此 <a href='/zh/trading/bfihbu.html' target='_blank'>連結<\u002fa> 查詢。當日臨時新增之變更交易有價證券，若該證券原得為融資融券交易，將被暫停融資融券。"]},{}]}
+== 200 1851 https://www.twse.com.tw/exchangeReport/MI_MARGN?response=json&date=20261022&selectType=MS
+{"stat":"OK","date":"20261022","tables":[{"title":"115年10月22日 信用交易統計","fields":["項目","買進","賣出","現金(券)償還","前日餘額","今日餘額"],"data":[["融資(交易單位)","350,036","362,918","15,043","9,632,327","9,604,402"],["融券(交易單位)","19,022","43,724","761","192,598","216,539"],["融資金額(仟元)","25,008,207","33,058,284","2,443,373","644,373,624","633,880,174"]],"notes":["本公司市場融資融券餘額的資料來源係為各授信機構(含證金公司及自辦信用交易證券商)，待各授信機構整體作業結束且傳輸完成，復經本公司彙整後於當日晚間即時公布於本公司網站。前述作業程序或因當日市場成交量值多寡，或因各授信機構傳輸過程順遂與否、更帳次數及作業時間長短等因素，均將影響本公司完成本表時間。","由於各授信機構於該
+頁右上角會呈現點選框，屆時請點選明細查詢，另外，歷史資料也可點選此 <a href='/zh/trading/bfihbu.html' target='_blank'>連結<\u002fa> 查詢。當日臨時新增之變更交易有價證券，若該證券原得為融資融券交易，將被暫停融資融券。"]},{}]}
+== 200 468926 https://openapi.twse.com.tw/v1/exchangeReport/MI_MARGN
+[
+{"股票代號":"00400A","股票名稱":"主動國泰動能高息","融資買進":"518","融資賣出":"168","融資現金償還":"","融資前日餘額":"14127","融資今日餘額":"14477","融資限額":"522035","融券買進":"","融券賣出":"3","融券現券償還":"","融券前日餘額":"","融券今日餘額":"3","融券限額":"522035","資券互抵":"","註記":" "},
+{"股票代號":"00401A","股票名稱":"主動摩根台灣鑫收","融資買進":"27","融資賣出":"25","融資現金償還":"","融資前日餘額":"3006","融資今日餘額":"3008","融資限額":"71348","融券買進":"","融券賣出":"","融券現券償還":"","融券前日餘額":"","融券今日餘額":"","融券限額":"71348","資券互抵":"","註記":" "},
+{"股票代號":"00402A","股票名稱":"主動安聯美國科技","融資買進":"10","融資賣出":"16","融資現金償還":"","融資前�
+:"37","融資賣出":"118","融資現金償還":"2","融資前日餘額":"8530","融資今日餘額":"8447","融資限額":"66724","融券買進":"","融券賣出":"1","融券現券償還":"","融券前日餘額":"50","融券今日餘額":"51","融券限額":"66724","資券互抵":"","註記":" "}]
+
+== 200 1725 https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261022&type=MS&response=json
+{"tables":[{},{},{},{},{},{},{"title":"115年10月22日 大盤統計資訊","fields":["成交統計","成交金額(元)","成交股數(股)","成交筆數"],"data":[["1.一般股票","842,426,895,166","4,429,687,637","3,978,496"],["2.台灣存託憑證","158,568,670","19,539,845","4,807"],["3.受益憑證","0","0","0"],["4.ETF","86,178,023,618","4,060,403,903","1,625,270"],["5.受益證券","7,041,910","680,100","103"],["6.變更交易股票","14,866,785","429,070","411"],["7.認購(售)權證","3,328,573,140","3,480,057,000","102,590"],["8.轉換公司債","0","0","0"],["9.附認股權特別股","0","0","0"],["10.附認股權公司債","0","0","0"],["11.認股權憑證","0","0","0"],["12.公司債","0","0","0"],["13.ETN","30,231,150","387,000","144"],["14.創新板股票","1,293,273,121","8,064,951","8,818"],["15.創新板-變更交易方法股票","0","0","0"],["證券合計(1+6+14+15)
+、新上市、恢復交易者。","外幣成交值係以本公司當日下午3時30分公告匯率換算後加入成交金額。公告匯率請參考本公司首頁>產品與服務>交易系統>雙幣ETF專區>代號對應及每日公告匯率。"]},{},{}],"type":"MS","stat":"OK","date":"20261022"}
 == 200 5457 https://fred.stlouisfed.org/graph/fredgraph.csv?id=BOGZ1FL663067003Q
 observation_date,BOGZ1FL663067003Q
 1945-10-01,1252
 1946-01-01,
 1946-04-01,
 1946-07-01,
-
-== 200 1787 https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date=20261001&response=json
-{"stat":"OK","date":"20261001","title":"115年10月市場成交資訊","hints":"單位：元、股","fields":["日期","成交股數","成交金額","成交筆數","發行量加權股價指數","漲跌點數"],"data":[["115/10/01","10,691,867,330","874,046,252,416","4,715,278","48,353.49","413.36"],["115/10/02","11,017,717,304","938,222,196,327","4,612,433","48,475.74","122.25"],["115/10/05","14,4
-== 200 50 https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?date=20261023&selectType=MS&response=json
-{"stat":"很抱歉，沒有符合條件的資料"}
-== 200 2069 https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK
-[
-{"Date":"1151001","TradeVolume":"10691867330","TradeValue":"874046252416","Transaction":"4715278","TAIEX":"48353.49","Change":"413.36"},
-{"Date":"1151002","TradeVolume":"11017717304","TradeValue":"938222196327","Transaction":"4612433","TAIEX":"48475.74","Change":"122.25"},
-{"Date":"1151005","TradeVolume":"14490437804","TradeValue":"1211041395113","Transaction":"5843674","TAIEX":"49712.04","Chang
-== 200 276931 https://data.bis.org/topics/CREDIT_GAPS
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width, initial-scale=1" data-next-head=""/><meta name="theme-color" content="#ffffff" data-next-head=""/><title data-next-head="">Credit-to-GDP gaps - overview | BIS Data Portal</title><meta name="description" content="Corresponds to the difference between the credit-to-GDP rat
-== 200 12127 https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.C/all?format=csv
-FREQ,BORROWERS_CTY,TC_BORROWERS,TC_LENDERS,CG_DTYPE,COLLECTION,DECIMALS,UNIT_MEASURE,UNIT_MULT,TIME_FORMAT,TITLE_TS,TIME_PERIOD,OBS_VALUE,OBS_STATUS,OBS_CONF,OBS_PRE_BREAK
-Q,US,P,A,C,E,1,770,0,,,1957-Q4,0.7754,A,F,
-Q,US,P,A,C,E,1,770,0,,,1958-Q1,0.5234,A,F,
-Q,US,P,A,C,E,1,770,0,,,1958-Q2,1.0925,A,F,
-Q,US,P,A,C,E,1,770,0,,,1958-Q3,1.3479,A,F,
+1946-10-01,594
+1947-01-01,
+1947-04-01,
+1947-07-01,
+1947-10-01,636
+1948-01-01,
+1948-04-01,
+1948-07-01,
+1948-10-01,605
+1949-01-01,
+1949-04-01,
+1949-07-01,
+1949-10-01,969
+1950-01-01,
+1950-04-01,
+1950-07-01,
+1950-10-01,1492
+1951-01-01,
+1951-04-01,
+1951-07-01,
+1951-10-01,1421
+1952-01-01,1422
+1952-04-01,1454
+1952-07-01,1465
+1952-10-01,1502
+1953-01-01,1665
+1953-04-01,1854
+1953-07-01,1789
+1953-10-01,1866
+1954-01-01,1888
+1954-04-01,2045
+1954-07-01,2290
+1954-10-01,2672
+1955-01-01,2971
+1955-04-01,3033
+1955-07-01,3133
+1955-10-01,3108
+1956-01-01,3099
+1956-04-01,3102
+1956-07-01,3097
+1956-10-01,3142
+1957-01-01,3015
+1957-04-01,3210
+1957-07-01,3106
+1957-10-01,2805
+1958-01-01,3054
+1958-04-01,3486
+1958-07-01,3554
+1958-10-01,3770
+1959-01-01,3804
+1959-04-01,3901
+1959-07-01,3747
+1959-10-01,3773
+1960-01-01,3460
+1960-04-01,35
+4-01,466897
+2022-07-01,458614
+2022-10-01,381610
+2023-01-01,370528
+2023-04-01,380525
+2023-07-01,401990
+2023-10-01,397939
+2024-01-01,433768
+2024-04-01,451005
+2024-07-01,451493
+2024-10-01,485515
+2025-01-01,476860
+2025-04-01,506422
+2025-07-01,566101
+2025-10-01,609675
+2026-01-01,622199
+2026-04-01,742321
 
