@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/update_market.py'
+      - 'scripts/recalculate.py'
       - '.github/workflows/refresh.yml'
   workflow_dispatch:
 permissions:

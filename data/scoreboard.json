@@ -1,8 +1,8 @@
 {
-  "as_of": "2026-10-24",
-  "version": "V3",
-  "score": 64,
-  "status": "WATCH",
+  "as_of": "2026-10-25",
+  "version": "V4",
+  "score": 69,
+  "status": "HIGH",
   "pillars": [
     {
       "name": "AI Demand",
@@ -23,6 +23,10 @@
     {
       "name": "Profitability",
       "score": 42
+    },
+    {
+      "name": "Valuation / Momentum",
+      "score": 93
     }
   ],
   "fundamentals": [
@@ -217,6 +221,11 @@
     {
       "date": "2026-10-24",
       "score": 64
+    },
+    {
+      "date": "2026-10-25",
+      "score": 69,
+      "burst": 52
     }
   ],
   "sources": [
@@ -247,7 +256,808 @@
     {
       "name": "Oracle FY27 Q1 · earnings release",
       "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+    },
+    {
+      "name": "Shiller CAPE（thetrading.tools，資料源 Robert Shiller）",
+      "url": "https://www.thetrading.tools/shiller-cape"
+    },
+    {
+      "name": "IMF Global Financial Stability Report, Oct 2026",
+      "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks"
+    },
+    {
+      "name": "中央社：台積電市值與權重（2026-10-05）",
+      "url": "https://www.cna.com.tw/news/afe/202610050201.aspx"
+    },
+    {
+      "name": "Greenwood, Shleifer & You (2019) Bubbles for Fama",
+      "url": "https://shleifer.scholars.harvard.edu/resource/pdf-181"
+    },
+    {
+      "name": "Jordà, Schularick & Taylor (2015) Leveraged Bubbles",
+      "url": "https://www.nber.org/papers/w21486"
     }
   ],
-  "market_updated_utc": "2026-10-24T00:57:46.627039+00:00"
+  "market_updated_utc": "2026-10-24T00:57:46.627039+00:00",
+  "research": {
+    "note": "indicators 為人工查證（附來源與資料日）；auto 與 series 由 GitHub Actions 每個平日自動更新。",
+    "indicators": [
+      {
+        "id": "cape",
+        "name": "S&P 500 Shiller CAPE",
+        "value": 40.71,
+        "unit": "倍",
+        "warn": 30,
+        "hot": 40,
+        "asof": "2026-10-01",
+        "note": "1881 年以來第 98.9 百分位；2000 年高點 44.2",
+        "source": "https://www.thetrading.tools/shiller-cape"
+      },
+      {
+        "id": "top7_share",
+        "name": "七大科技股占 S&P 500 市值",
+        "value": 35,
+        "unit": "%",
+        "warn": 25,
+        "hot": 35,
+        "asof": "2026-10-13",
+        "note": "IMF 2026 年 10 月 GFSR",
+        "source": "https://dailybeirut.com/en/business/imf-flags-ai-bubble-risk-to-global-markets/"
+      },
+      {
+        "id": "tsmc_weight",
+        "name": "台積電占加權指數權重",
+        "value": 41,
+        "unit": "%",
+        "warn": 30,
+        "hot": 40,
+        "asof": "2026-10-05",
+        "note": "市值 66.77 兆元",
+        "source": "https://www.cna.com.tw/news/afe/202610050201.aspx"
+      },
+      {
+        "id": "capex_cloud",
+        "name": "雲端三雄資本支出／雲端營收",
+        "value": 102,
+        "unit": "%",
+        "warn": 70,
+        "hot": 100,
+        "asof": "2026-08-23",
+        "note": "UBS 估計：亞馬遜、Alphabet、微軟 2026 年",
+        "source": "https://finance.yahoo.com/technology/ai/articles/ai-absurd-spending-boom-hyperscalers-162709082.html"
+      },
+      {
+        "id": "capex_growth",
+        "name": "四大雲端業者資本支出年增率",
+        "value": 78,
+        "unit": "%",
+        "warn": 30,
+        "hot": 60,
+        "asof": "2026-10-02",
+        "note": "2026 指引約 7,300 億美元 vs 2025 約 4,100 億美元",
+        "source": "https://valueaddvc.com/blog/big-tech-ai-capex-in-2025-microsoft-google-meta-and-amazon-and-the-spending-race"
+      },
+      {
+        "id": "circular_debt",
+        "name": "AI 循環交易中的債務與負債",
+        "value": 9500,
+        "unit": "億美元",
+        "warn": 3000,
+        "hot": 8000,
+        "asof": "2026-10-13",
+        "note": "IMF 檢視雲端業者與 AI 公司間的交易，約 9,500 億美元",
+        "source": "https://dailybeirut.com/en/business/imf-flags-ai-bubble-risk-to-global-markets/"
+      },
+      {
+        "id": "tw_turnover",
+        "name": "台股日周轉率高點",
+        "value": 1.716,
+        "unit": "%",
+        "warn": 1.5,
+        "hot": 3.0,
+        "asof": "2026-04-23",
+        "note": "1990/12/6 歷史最高 3.736%",
+        "source": "https://technews.tw/?p=1551483"
+      }
+    ],
+    "auto": {
+      "sox_drawdown": {
+        "peak": 14655.11,
+        "peak_date": "2026-06-22",
+        "last": 10779.5,
+        "last_date": "2026-10-23",
+        "dd_pct": 26.4
+      },
+      "twii_drawdown": {
+        "peak": 49822.55,
+        "peak_date": "2026-10-06",
+        "last": 46041.0,
+        "last_date": "2026-10-22",
+        "dd_pct": 7.6
+      },
+      "seeded": true
+    },
+    "series": {
+      "SOX": [
+        [
+          "2026-09-08",
+          11887.9
+        ],
+        [
+          "2026-09-09",
+          11931.3
+        ],
+        [
+          "2026-09-10",
+          11614.2
+        ],
+        [
+          "2026-09-11",
+          11824.0
+        ],
+        [
+          "2026-09-14",
+          11131.3
+        ],
+        [
+          "2026-09-15",
+          11175.5
+        ],
+        [
+          "2026-09-16",
+          11246.1
+        ],
+        [
+          "2026-09-17",
+          11599.5
+        ],
+        [
+          "2026-09-18",
+          11921.7
+        ],
+        [
+          "2026-09-21",
+          12433.2
+        ],
+        [
+          "2026-09-22",
+          12689.8
+        ],
+        [
+          "2026-09-23",
+          12534.3
+        ],
+        [
+          "2026-09-24",
+          12492.5
+        ],
+        [
+          "2026-09-25",
+          12668.9
+        ],
+        [
+          "2026-09-28",
+          12465.2
+        ],
+        [
+          "2026-09-29",
+          12629.2
+        ],
+        [
+          "2026-09-30",
+          12628.6
+        ],
+        [
+          "2026-10-01",
+          12829.0
+        ],
+        [
+          "2026-10-02",
+          13136.7
+        ],
+        [
+          "2026-10-05",
+          13172.7
+        ],
+        [
+          "2026-10-06",
+          13217.8
+        ],
+        [
+          "2026-10-07",
+          13066.2
+        ],
+        [
+          "2026-10-08",
+          12623.7
+        ],
+        [
+          "2026-10-09",
+          12572.4
+        ],
+        [
+          "2026-10-12",
+          12236.8
+        ],
+        [
+          "2026-10-13",
+          12208.8
+        ],
+        [
+          "2026-10-14",
+          11684.4
+        ],
+        [
+          "2026-10-15",
+          11581.2
+        ],
+        [
+          "2026-10-16",
+          11137.3
+        ],
+        [
+          "2026-10-19",
+          11316.3
+        ],
+        [
+          "2026-10-20",
+          11283.8
+        ],
+        [
+          "2026-10-21",
+          11505.6
+        ],
+        [
+          "2026-10-22",
+          10732.0
+        ],
+        [
+          "2026-10-23",
+          10779.5
+        ]
+      ]
+    },
+    "cape_history": [
+      [
+        "1990-01-01",
+        17.05
+      ],
+      [
+        "1991-01-01",
+        15.61
+      ],
+      [
+        "1992-01-01",
+        19.77
+      ],
+      [
+        "1993-01-01",
+        20.32
+      ],
+      [
+        "1994-01-01",
+        21.41
+      ],
+      [
+        "1995-01-01",
+        20.22
+      ],
+      [
+        "1996-01-01",
+        24.76
+      ],
+      [
+        "1997-01-01",
+        28.33
+      ],
+      [
+        "1998-01-01",
+        32.86
+      ],
+      [
+        "1999-01-01",
+        40.57
+      ],
+      [
+        "2000-01-01",
+        43.77
+      ],
+      [
+        "2001-01-01",
+        36.98
+      ],
+      [
+        "2002-01-01",
+        30.28
+      ],
+      [
+        "2003-01-01",
+        22.9
+      ],
+      [
+        "2004-01-01",
+        27.66
+      ],
+      [
+        "2005-01-01",
+        26.59
+      ],
+      [
+        "2006-01-01",
+        26.47
+      ],
+      [
+        "2007-01-01",
+        27.21
+      ],
+      [
+        "2008-01-01",
+        24.02
+      ],
+      [
+        "2009-01-01",
+        15.17
+      ],
+      [
+        "2010-01-01",
+        20.53
+      ],
+      [
+        "2011-01-01",
+        22.98
+      ],
+      [
+        "2012-01-01",
+        21.21
+      ],
+      [
+        "2013-01-01",
+        21.9
+      ],
+      [
+        "2014-01-01",
+        24.86
+      ],
+      [
+        "2015-01-01",
+        26.49
+      ],
+      [
+        "2016-01-01",
+        24.21
+      ],
+      [
+        "2017-01-01",
+        28.06
+      ],
+      [
+        "2018-01-01",
+        33.31
+      ],
+      [
+        "2019-01-01",
+        28.38
+      ],
+      [
+        "2020-01-01",
+        30.99
+      ],
+      [
+        "2021-01-01",
+        34.51
+      ],
+      [
+        "2022-01-01",
+        36.94
+      ],
+      [
+        "2023-01-01",
+        28.34
+      ],
+      [
+        "2024-01-01",
+        31.97
+      ],
+      [
+        "2025-01-01",
+        37.14
+      ],
+      [
+        "2026-01-01",
+        39.65
+      ],
+      [
+        "2026-10-23",
+        40.36
+      ]
+    ],
+    "cape_long_run_mean": 17.4,
+    "taiex_history": [
+      [
+        "1985-12-31",
+        835.12
+      ],
+      [
+        "1986-12-31",
+        1039.11
+      ],
+      [
+        "1987-12-31",
+        2339.86
+      ],
+      [
+        "1988-12-31",
+        5119.11
+      ],
+      [
+        "1989-12-31",
+        9624.18
+      ],
+      [
+        "1990-02-12",
+        12682
+      ],
+      [
+        "1990-10-12",
+        2485
+      ],
+      [
+        "1990-12-31",
+        4530.16
+      ],
+      [
+        "1991-12-31",
+        4540.55
+      ],
+      [
+        "1992-12-31",
+        3377.06
+      ],
+      [
+        "1993-12-31",
+        6070.56
+      ],
+      [
+        "1994-12-31",
+        7111.1
+      ],
+      [
+        "1995-12-31",
+        5158.65
+      ],
+      [
+        "1996-12-31",
+        6933.94
+      ],
+      [
+        "1997-12-31",
+        8187.27
+      ],
+      [
+        "1998-12-31",
+        6418.43
+      ],
+      [
+        "1999-12-31",
+        8448.84
+      ],
+      [
+        "2000-12-31",
+        4743.94
+      ],
+      [
+        "2001-12-31",
+        5551.24
+      ],
+      [
+        "2002-12-31",
+        4452.45
+      ],
+      [
+        "2003-12-31",
+        5890.69
+      ],
+      [
+        "2004-12-31",
+        6139.69
+      ],
+      [
+        "2005-12-31",
+        6548.34
+      ],
+      [
+        "2006-12-31",
+        7823.72
+      ],
+      [
+        "2007-12-31",
+        8506.28
+      ],
+      [
+        "2008-12-31",
+        4591.22
+      ],
+      [
+        "2009-12-31",
+        8188.11
+      ],
+      [
+        "2010-12-31",
+        8972.5
+      ],
+      [
+        "2011-12-31",
+        7072.08
+      ],
+      [
+        "2012-12-31",
+        7699.5
+      ],
+      [
+        "2013-12-31",
+        8611.51
+      ],
+      [
+        "2014-12-31",
+        9307.26
+      ],
+      [
+        "2015-12-31",
+        8338.06
+      ],
+      [
+        "2016-12-31",
+        9253.5
+      ],
+      [
+        "2017-12-31",
+        10642.86
+      ],
+      [
+        "2018-12-31",
+        9727.41
+      ],
+      [
+        "2019-12-31",
+        11997.14
+      ],
+      [
+        "2020-12-31",
+        14732.53
+      ],
+      [
+        "2021-12-31",
+        18218.84
+      ],
+      [
+        "2022-12-31",
+        14137.69
+      ],
+      [
+        "2023-12-31",
+        17930.81
+      ],
+      [
+        "2024-12-31",
+        23035.1
+      ],
+      [
+        "2025-12-31",
+        28963.6
+      ],
+      [
+        "2026-10-22",
+        46041.0
+      ]
+    ],
+    "capex_revenue": [
+      {
+        "item": "2024 資本支出",
+        "kind": "capex",
+        "year": "2024",
+        "usd_bn": 226,
+        "basis": "實際"
+      },
+      {
+        "item": "2025 資本支出",
+        "kind": "capex",
+        "year": "2025",
+        "usd_bn": 410,
+        "basis": "實際"
+      },
+      {
+        "item": "2026 資本支出",
+        "kind": "capex",
+        "year": "2026",
+        "usd_bn": 730,
+        "basis": "公司指引（2026/7）"
+      },
+      {
+        "item": "2027 資本支出",
+        "kind": "capex",
+        "year": "2027",
+        "usd_bn": 1140,
+        "basis": "高盛預估（2026/9）"
+      },
+      {
+        "item": "OpenAI 年化營收",
+        "kind": "revenue",
+        "year": "2026",
+        "usd_bn": 50,
+        "basis": "2026/9 底年化"
+      },
+      {
+        "item": "Anthropic 年化營收",
+        "kind": "revenue",
+        "year": "2026",
+        "usd_bn": 65,
+        "basis": "2026/7 底年化"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-11 中",
+        "event": "Anthropic 預計掛牌",
+        "why": "大型 AI IPO 的定價與首日表現，是市場風險胃納的直接讀數",
+        "status": "待觀察"
+      },
+      {
+        "date": "2026-11 下旬",
+        "event": "Nvidia FY27 Q3 財報（日期待公司公告）",
+        "why": "資料中心營收年增率是否放緩，是基本面是否轉弱的第一個訊號",
+        "status": "待觀察"
+      },
+      {
+        "date": "2026-10",
+        "event": "OpenAI 以約 1.4 兆美元估值募資約 300 億美元",
+        "why": "私募市場估值與融資條件反映 AI 資金是否轉緊",
+        "status": "進行中"
+      },
+      {
+        "date": "2026-10-22",
+        "event": "費城半導體指數單日 -6.72%",
+        "why": "距 6/22 高點約 -27%，接近修正區",
+        "status": "已發生"
+      },
+      {
+        "date": "2026-10-13",
+        "event": "IMF GFSR 將 AI 資產修正列為三大風險之一",
+        "why": "官方機構首次把 AI 修正列為主要金融穩定風險",
+        "status": "已發生"
+      },
+      {
+        "date": "2026-07-29",
+        "event": "費城半導體指數自高點回落 29%",
+        "why": "本輪第一次大型回檔，之後反彈",
+        "status": "已發生"
+      },
+      {
+        "date": "2026-06-22",
+        "event": "費城半導體指數創高 14,655",
+        "why": "本輪高點",
+        "status": "已發生"
+      }
+    ],
+    "signals": [
+      {
+        "id": "cape",
+        "name": "S&P 500 Shiller CAPE",
+        "value": 40.71,
+        "unit": "倍",
+        "warn": 30,
+        "hot": 40,
+        "asof": "2026-10-01",
+        "note": "1881 年以來第 98.9 百分位；2000 年高點 44.2",
+        "source": "https://www.thetrading.tools/shiller-cape",
+        "status": 2,
+        "auto": false
+      },
+      {
+        "id": "top7_share",
+        "name": "七大科技股占 S&P 500 市值",
+        "value": 35,
+        "unit": "%",
+        "warn": 25,
+        "hot": 35,
+        "asof": "2026-10-13",
+        "note": "IMF 2026 年 10 月 GFSR",
+        "source": "https://dailybeirut.com/en/business/imf-flags-ai-bubble-risk-to-global-markets/",
+        "status": 2,
+        "auto": false
+      },
+      {
+        "id": "tsmc_weight",
+        "name": "台積電占加權指數權重",
+        "value": 41,
+        "unit": "%",
+        "warn": 30,
+        "hot": 40,
+        "asof": "2026-10-05",
+        "note": "市值 66.77 兆元",
+        "source": "https://www.cna.com.tw/news/afe/202610050201.aspx",
+        "status": 2,
+        "auto": false
+      },
+      {
+        "id": "capex_cloud",
+        "name": "雲端三雄資本支出／雲端營收",
+        "value": 102,
+        "unit": "%",
+        "warn": 70,
+        "hot": 100,
+        "asof": "2026-08-23",
+        "note": "UBS 估計：亞馬遜、Alphabet、微軟 2026 年",
+        "source": "https://finance.yahoo.com/technology/ai/articles/ai-absurd-spending-boom-hyperscalers-162709082.html",
+        "status": 2,
+        "auto": false
+      },
+      {
+        "id": "capex_growth",
+        "name": "四大雲端業者資本支出年增率",
+        "value": 78,
+        "unit": "%",
+        "warn": 30,
+        "hot": 60,
+        "asof": "2026-10-02",
+        "note": "2026 指引約 7,300 億美元 vs 2025 約 4,100 億美元",
+        "source": "https://valueaddvc.com/blog/big-tech-ai-capex-in-2025-microsoft-google-meta-and-amazon-and-the-spending-race",
+        "status": 2,
+        "auto": false
+      },
+      {
+        "id": "circular_debt",
+        "name": "AI 循環交易中的債務與負債",
+        "value": 9500,
+        "unit": "億美元",
+        "warn": 3000,
+        "hot": 8000,
+        "asof": "2026-10-13",
+        "note": "IMF 檢視雲端業者與 AI 公司間的交易，約 9,500 億美元",
+        "source": "https://dailybeirut.com/en/business/imf-flags-ai-bubble-risk-to-global-markets/",
+        "status": 2,
+        "auto": false
+      },
+      {
+        "id": "tw_turnover",
+        "name": "台股日周轉率高點",
+        "value": 1.716,
+        "unit": "%",
+        "warn": 1.5,
+        "hot": 3.0,
+        "asof": "2026-04-23",
+        "note": "1990/12/6 歷史最高 3.736%",
+        "source": "https://technews.tw/?p=1551483",
+        "status": 1,
+        "auto": false
+      }
+    ],
+    "burst": {
+      "score": 52,
+      "parts": [
+        {
+          "id": "sox_drawdown",
+          "name": "費城半導體指數",
+          "dd_pct": 26.4,
+          "crash_pct": 40,
+          "peak": 14655.11,
+          "peak_date": "2026-06-22",
+          "last": 10779.5,
+          "last_date": "2026-10-23",
+          "progress": 66
+        },
+        {
+          "id": "twii_drawdown",
+          "name": "台股加權指數",
+          "dd_pct": 7.6,
+          "crash_pct": 20,
+          "peak": 49822.55,
+          "peak_date": "2026-10-06",
+          "last": 46041.0,
+          "last_date": "2026-10-22",
+          "progress": 38
+        }
+      ]
+    }
+  },
+  "methodology_changed": "2026-10-25"
 }
