@@ -343,7 +343,7 @@ fetch('data/scoreboard.json', {cache: 'no-store'}).then((r) => { if (!r.ok) thro
   const ps = IA.psy_sox_rel, pp = IA.psy_sp500_pd, mg = IA.margin_yoy_us, cg = IA.credit_gap_us;
   const epi = (p) => !p || !p.last_episode ? '近期未出現爆炸期。' : p.last_episode.ongoing ? `目前處於爆炸期：${esc(p.last_episode.start)} 起，峰值 ${p.last_episode.peak_stat}（${esc(p.last_episode.peak_date)}）。` : `最近一次爆炸期：${esc(p.last_episode.start)} 至 ${esc(p.last_episode.last_above)}，峰值 ${p.last_episode.peak_stat}（${esc(p.last_episode.peak_date)}），${esc(p.last_episode.collapsed_on)} 跌破臨界值。`;
   if (ps) $('psySoxNote').innerHTML = `最新 ${ps.stat}（${esc(ps.last_date)}）；臨界值 90% ${ps.cv90}、95% ${ps.cv95}。` + epi(ps);
-  if (pp) $('psySpNote').innerHTML = `最新 ${pp.stat}（${esc(pp.last_date)}）；臨界值 90% ${pp.cv90}、95% ${pp.cv95}。` + epi(pp) + ' 圖中 1997–2000 年的高點即網路泡沫。';
+  if (pp) $('psySpNote').innerHTML = `最新 ${pp.stat}（${esc(pp.last_date)}）；臨界值 90% ${pp.cv90}、95% ${pp.cv95}。` + epi(pp) + ' 圖中 1997–2000 年的高點即網路泡沫；2008–09 年的尖峰是股利被大幅削減造成的假訊號，不是泡沫。';
   if (mg) $('marginNote').innerHTML = `最新 ${fmt(mg.value, 1)}%（${esc(mg.asof.slice(0, 7))}），${esc(mg.since.slice(0, 4))} 年以來第 ${mg.pct} 百分位。1990 年以來超過第 95 百分位的年份：${[...new Set(mg.history.filter(([, v]) => v >= mg.p95).map(([d]) => d.slice(0, 4)))].join('、') || '無'}。`;
   if (cg) $('gapNote').innerHTML = `最新 ${fmt(cg.value, 1)} 個百分點（${esc(cg.asof)}）；歷史高點 ${fmt(cg.peak, 1)}（${esc(cg.peak_q)}），即金融海嘯前。`;
   statChart($('psySoxChart'), ps && ps.series, ps ? [[ps.cv95, C.red], [ps.cv90, '#ffd43b']] : [], (v) => 'BSADF ' + v.toFixed(2));
