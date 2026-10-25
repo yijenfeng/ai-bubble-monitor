@@ -99,19 +99,18 @@ See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace 
   quotes.sort_index(inplace=True)
 updated 14 market series; research series: SOX, TWII, SPX
 
-real	0m4.590s
-user	0m0.995s
-sys	0m0.093s
+real	0m4.591s
+user	0m1.202s
+sys	0m0.094s
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   quotes.sort_index(inplace=True)
 /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/yfinance/utils.py:568: Pandas4Warning: The inplace keyword in DataFrame.sort_index is deprecated and will be removed in a future version (PDEP-8).
 See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
   quotes.sort_index(inplace=True)
-research warning shiller TypeError('list indices must be integers or slices, not str')
-research indicators: {'shiller': 'failed: TypeError', 'bis': 'ok', 'margin': 'ok', 'sox_relative': 'ok', 'twse_margin': 'ok'}
+research indicators: {'shiller': 'ok', 'bis': 'ok', 'margin': 'ok', 'sox_relative': 'ok', 'twse_margin': 'ok'}
 
-real	0m15.465s
-user	0m1.354s
-sys	0m0.092s
+real	0m16.421s
+user	0m1.614s
+sys	0m0.096s
 score 60 WATCH | burst 52 | groups [('price', 17), ('credit', 25), ('investment', 75), ('valuation', 50)]

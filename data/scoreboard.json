@@ -302,7 +302,7 @@
       "url": "https://www.nber.org/papers/w21486"
     }
   ],
-  "market_updated_utc": "2026-10-25T06:38:38.091464+00:00",
+  "market_updated_utc": "2026-10-25T06:39:46.379891+00:00",
   "research": {
     "note": "indicators 為人工查證（附來源與資料日）；auto 與 series 由 GitHub Actions 每個平日自動更新。",
     "auto": {
@@ -325,7 +325,7 @@
         "dd_pct": 7.6
       },
       "twii_2y_return_pct": 97.3,
-      "updated_utc": "2026-10-25T06:38:38.091225+00:00"
+      "updated_utc": "2026-10-25T06:39:46.379583+00:00"
     },
     "series": {
       "SOX": [
@@ -3289,7 +3289,7 @@
         "median": 16.61,
         "since": "1881-01",
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-10-25T06:38:38.743881+00:00"
+        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
       },
       "psy_sp500_pd": {
         "label": "S&P 500 價格／股利比（月，1871 起）",
@@ -4743,7 +4743,7 @@
           ]
         ],
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-10-25T06:38:38.743881+00:00"
+        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
       },
       "equity_gap": {
         "value": 27.9,
@@ -4992,7 +4992,7 @@
         ],
         "method": "實質 S&P 500（Shiller CPI 平減）年平均，當年以最新月份代入；單邊 HP 濾波 λ=1600，至少 20 年資料",
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-10-25T06:38:38.743881+00:00"
+        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
       },
       "credit_gap_us": {
         "value": -11.32,
@@ -5582,7 +5582,7 @@
           ]
         ],
         "source": "https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.C/all?format=csv",
-        "updated_utc": "2026-10-25T06:38:39.373978+00:00"
+        "updated_utc": "2026-10-25T06:39:48.022287+00:00"
       },
       "margin_yoy_us": {
         "value": 46.6,
@@ -6179,7 +6179,7 @@
           ]
         ],
         "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BOGZ1FL663067003Q",
-        "updated_utc": "2026-10-25T06:38:39.484984+00:00"
+        "updated_utc": "2026-10-25T06:39:48.705742+00:00"
       },
       "psy_sox_rel": {
         "label": "費城半導體／S&P 500 價格比（週）",
@@ -7233,7 +7233,7 @@
           ]
         ],
         "source": "Yahoo Finance via yfinance（^SOX、^GSPC 週收盤）",
-        "updated_utc": "2026-10-25T06:38:40.398873+00:00"
+        "updated_utc": "2026-10-25T06:39:49.826384+00:00"
       },
       "tw_margin_balance": {
         "value": 6338.8,
@@ -7241,11 +7241,169 @@
         "unit": "億元",
         "source": "https://www.twse.com.tw/zh/trading/margin/mi-margn.html",
         "yoy": 116.4,
-        "updated_utc": "2026-10-25T06:38:53.507772+00:00"
+        "updated_utc": "2026-10-25T06:40:02.805069+00:00"
+      },
+      "cape_chart": {
+        "series": [
+          [
+            "1990-01",
+            17.05
+          ],
+          [
+            "1991-01",
+            15.61
+          ],
+          [
+            "1992-01",
+            19.77
+          ],
+          [
+            "1993-01",
+            20.32
+          ],
+          [
+            "1994-01",
+            21.41
+          ],
+          [
+            "1995-01",
+            20.22
+          ],
+          [
+            "1996-01",
+            24.76
+          ],
+          [
+            "1997-01",
+            28.33
+          ],
+          [
+            "1998-01",
+            32.86
+          ],
+          [
+            "1999-01",
+            40.58
+          ],
+          [
+            "2000-01",
+            43.77
+          ],
+          [
+            "2001-01",
+            36.98
+          ],
+          [
+            "2002-01",
+            30.28
+          ],
+          [
+            "2003-01",
+            22.9
+          ],
+          [
+            "2004-01",
+            27.66
+          ],
+          [
+            "2005-01",
+            26.59
+          ],
+          [
+            "2006-01",
+            26.47
+          ],
+          [
+            "2007-01",
+            27.21
+          ],
+          [
+            "2008-01",
+            24.02
+          ],
+          [
+            "2009-01",
+            15.17
+          ],
+          [
+            "2010-01",
+            20.53
+          ],
+          [
+            "2011-01",
+            22.98
+          ],
+          [
+            "2012-01",
+            21.21
+          ],
+          [
+            "2013-01",
+            21.9
+          ],
+          [
+            "2014-01",
+            24.86
+          ],
+          [
+            "2015-01",
+            26.49
+          ],
+          [
+            "2016-01",
+            24.21
+          ],
+          [
+            "2017-01",
+            28.06
+          ],
+          [
+            "2018-01",
+            33.31
+          ],
+          [
+            "2019-01",
+            28.38
+          ],
+          [
+            "2020-01",
+            30.99
+          ],
+          [
+            "2021-01",
+            34.51
+          ],
+          [
+            "2022-01",
+            36.94
+          ],
+          [
+            "2023-01",
+            28.33
+          ],
+          [
+            "2024-01",
+            32.05
+          ],
+          [
+            "2025-01",
+            37.13
+          ],
+          [
+            "2026-01",
+            39.64
+          ],
+          [
+            "2026-10",
+            40.71
+          ]
+        ],
+        "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
+        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
       }
     },
     "indicators_auto_status": {
-      "shiller": "failed: TypeError",
+      "shiller": "ok",
       "bis": "ok",
       "margin": "ok",
       "sox_relative": "ok",
