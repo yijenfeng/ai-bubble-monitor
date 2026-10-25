@@ -191,7 +191,7 @@ def shiller_block():
     chart = [[d, round(c, 2)] for d, c in cape_pts if d >= '1990-01' and d.endswith('-01')]
     if chart[-1][0] != last_d:
         chart.append([last_d, round(last_c, 2)])
-    out['cape_chart'] = chart
+    out['cape_chart'] = {'series': chart, 'source': SHILLER_CSV}
     return out
 
 
