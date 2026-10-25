@@ -302,7 +302,7 @@
       "url": "https://www.nber.org/papers/w21486"
     }
   ],
-  "market_updated_utc": "2026-10-25T06:39:46.379891+00:00",
+  "market_updated_utc": "2026-10-25T06:43:03.924780+00:00",
   "research": {
     "note": "indicators 為人工查證（附來源與資料日）；auto 與 series 由 GitHub Actions 每個平日自動更新。",
     "auto": {
@@ -325,7 +325,7 @@
         "dd_pct": 7.6
       },
       "twii_2y_return_pct": 97.3,
-      "updated_utc": "2026-10-25T06:39:46.379583+00:00"
+      "updated_utc": "2026-10-25T06:43:03.924542+00:00"
     },
     "series": {
       "SOX": [
@@ -2863,7 +2863,14 @@
         }
       ],
       "jst_turn_pct": 15,
-      "psy_sox_episode": null
+      "psy_sox_episode": {
+        "start": "2026-04-20",
+        "last_above": "2026-10-05",
+        "peak_date": "2026-06-15",
+        "peak_stat": 2.772,
+        "ongoing": false,
+        "collapsed_on": "2026-10-12"
+      }
     },
     "manual": {
       "note": "人工查證輸入：每年或每有新資料時更新 value、asof、source；門檻規則寫在 scripts/recalculate.py。",
@@ -3290,7 +3297,7 @@
         "median": 16.61,
         "since": "1881-01",
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
+        "updated_utc": "2026-10-25T06:43:04.695850+00:00"
       },
       "psy_sp500_pd": {
         "label": "S&P 500 價格／股利比（月，1871 起）",
@@ -3301,6 +3308,14 @@
         "window": 92,
         "last_date": "2026-06",
         "explosive_since": null,
+        "last_episode": {
+          "start": "2008-10",
+          "last_above": "2009-04",
+          "peak_date": "2009-03",
+          "peak_stat": 2.0,
+          "ongoing": false,
+          "collapsed_on": "2009-05"
+        },
         "series": [
           [
             "1996-07",
@@ -4744,7 +4759,7 @@
           ]
         ],
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
+        "updated_utc": "2026-10-25T06:43:04.695850+00:00"
       },
       "equity_gap": {
         "value": 27.9,
@@ -4993,7 +5008,7 @@
         ],
         "method": "實質 S&P 500（Shiller CPI 平減）年平均，當年以最新月份代入；單邊 HP 濾波 λ=1600，至少 20 年資料",
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
+        "updated_utc": "2026-10-25T06:43:04.695850+00:00"
       },
       "credit_gap_us": {
         "value": -11.32,
@@ -5583,7 +5598,7 @@
           ]
         ],
         "source": "https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.C/all?format=csv",
-        "updated_utc": "2026-10-25T06:39:48.022287+00:00"
+        "updated_utc": "2026-10-25T06:43:06.299022+00:00"
       },
       "margin_yoy_us": {
         "value": 46.6,
@@ -6180,7 +6195,7 @@
           ]
         ],
         "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BOGZ1FL663067003Q",
-        "updated_utc": "2026-10-25T06:39:48.705742+00:00"
+        "updated_utc": "2026-10-25T06:43:06.425351+00:00"
       },
       "psy_sox_rel": {
         "label": "費城半導體／S&P 500 價格比（週）",
@@ -6191,6 +6206,14 @@
         "window": 91,
         "last_date": "2026-10-19",
         "explosive_since": null,
+        "last_episode": {
+          "start": "2026-04-20",
+          "last_above": "2026-10-05",
+          "peak_date": "2026-06-15",
+          "peak_stat": 2.772,
+          "ongoing": false,
+          "collapsed_on": "2026-10-12"
+        },
         "series": [
           [
             "2021-11-01",
@@ -7234,7 +7257,7 @@
           ]
         ],
         "source": "Yahoo Finance via yfinance（^SOX、^GSPC 週收盤）",
-        "updated_utc": "2026-10-25T06:39:49.826384+00:00"
+        "updated_utc": "2026-10-25T06:43:07.375256+00:00"
       },
       "tw_margin_balance": {
         "value": 6338.8,
@@ -7242,7 +7265,7 @@
         "unit": "億元",
         "source": "https://www.twse.com.tw/zh/trading/margin/mi-margn.html",
         "yoy": 116.4,
-        "updated_utc": "2026-10-25T06:40:02.805069+00:00"
+        "updated_utc": "2026-10-25T06:43:19.986810+00:00"
       },
       "cape_chart": {
         "series": [
@@ -7400,7 +7423,7 @@
           ]
         ],
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-10-25T06:39:47.327506+00:00"
+        "updated_utc": "2026-10-25T06:43:04.695850+00:00"
       }
     },
     "indicators_auto_status": {
