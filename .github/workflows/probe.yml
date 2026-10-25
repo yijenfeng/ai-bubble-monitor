@@ -12,19 +12,15 @@ jobs:
       - run: |
           exec > probe-result.txt 2>&1
           for u in \
-            "https://www.thetrading.tools/data/indicators/shiller-cape.csv" \
-            "https://shillerdata.com/" \
-            "http://www.econ.yale.edu/~shiller/data/ie_data.xls" \
-            "https://img1.wsimg.com/blobby/go/e5e77e0b-59d1-44d9-ab25-4763ac982e53/downloads/ie_data.xls" \
-            "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL" \
-            "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BOGZ1FL663067003Q" \
-            "https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date=20261001&response=json" \
-            "https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?date=20261023&selectType=MS&response=json" \
-            "https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK" \
-            "https://data.bis.org/topics/CREDIT_GAPS" \
-            "https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.C/all?format=csv" ; do
+            "https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.TW.P.A.C/all?format=csv" \
+            "https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.B/all?format=csv" \
+            "https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?date=20261022&selectType=MS&response=json" \
+            "https://www.twse.com.tw/exchangeReport/MI_MARGN?response=json&date=20261022&selectType=MS" \
+            "https://openapi.twse.com.tw/v1/exchangeReport/MI_MARGN" \
+            "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX?date=20261022&type=MS&response=json" \
+            "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BOGZ1FL663067003Q" ; do
             code=$(curl -sS -L -m 30 -o /tmp/out -w "%{http_code}" "$u" || echo ERR)
-            echo "== $code $(wc -c </tmp/out) $u"; head -c 400 /tmp/out | tr -d '\0' | head -5; echo
+            echo "== $code $(wc -c </tmp/out) $u"; head -c 900 /tmp/out | tr -d '\0'; echo; tail -c 300 /tmp/out; echo
           done
       - run: |
           git config user.name probe-bot
