@@ -1,0 +1,46 @@
+== 200 151314 https://www.thetrading.tools/data/indicators/shiller-cape.csv
+date,cape_value,tr_cape,ecy,added_date,release_date,sp_price,dividend,cpi,earnings,long_rate
+1881-01-01,18.474,24.1351,-1.0489,2026-07-12,1881-02-01,6.19,0.265,9.41942,0.4858,3.7
+1881-02-01,18.1473,23.6555,-1.1393,2026-07-12,1881-03-01,6.17,0.27,9.514585,0.4817,3.6933
+1881-03-01,18.2701,23.7677,-1.3123,2026-07-12,1881-04-01,6.24,0.275,9.514585,0.4775,3.6867
+1881-04-01,17.9501,23.3089,-0.7504,2026-
+== 200 121558 https://shillerdata.com/
+<!DOCTYPE html><html lang="en-US"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>Shiller</title><meta name="description" content="Access comprehensive Shiller data including CAPE and P/E ratios from Robert Shiller for informed financial insights."/><meta name="author" content="Shiller"/>
+== 200 1628672 http://www.econ.yale.edu/~shiller/data/ie_data.xls
+ĞÏà¡±á>şÿ	kşÿÿÿşÿÿÿRSTUVWXYZ[\]^_`abcdefghijÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+== 200 1623552 https://img1.wsimg.com/blobby/go/e5e77e0b-59d1-44d9-ab25-4763ac982e53/downloads/ie_data.xls
+ĞÏà¡±á>şÿ	^şÿÿÿbãdåfçhéjëlínïpñrót	õ	v
+÷
+xùÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+== 200 17763 https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL
+observation_date,CPIAUCSL
+1947-01-01,21.480
+1947-02-01,21.620
+1947-03-01,22.000
+1947-04-01,22.000
+
+== 200 5457 https://fred.stlouisfed.org/graph/fredgraph.csv?id=BOGZ1FL663067003Q
+observation_date,BOGZ1FL663067003Q
+1945-10-01,1252
+1946-01-01,
+1946-04-01,
+1946-07-01,
+
+== 200 1787 https://www.twse.com.tw/rwd/zh/afterTrading/FMTQIK?date=20261001&response=json
+{"stat":"OK","date":"20261001","title":"115å¹´10æœˆå¸‚å ´æˆäº¤è³‡è¨Š","hints":"å–®ä½ï¼šå…ƒã€è‚¡","fields":["æ—¥æœŸ","æˆäº¤è‚¡æ•¸","æˆäº¤é‡‘é¡","æˆäº¤ç­†æ•¸","ç™¼è¡Œé‡åŠ æ¬Šè‚¡åƒ¹æŒ‡æ•¸","æ¼²è·Œé»æ•¸"],"data":[["115/10/01","10,691,867,330","874,046,252,416","4,715,278","48,353.49","413.36"],["115/10/02","11,017,717,304","938,222,196,327","4,612,433","48,475.74","122.25"],["115/10/05","14,4
+== 200 50 https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN?date=20261023&selectType=MS&response=json
+{"stat":"å¾ˆæŠ±æ­‰ï¼Œæ²’æœ‰ç¬¦åˆæ¢ä»¶çš„è³‡æ–™"}
+== 200 2069 https://openapi.twse.com.tw/v1/exchangeReport/FMTQIK
+[
+{"Date":"1151001","TradeVolume":"10691867330","TradeValue":"874046252416","Transaction":"4715278","TAIEX":"48353.49","Change":"413.36"},
+{"Date":"1151002","TradeVolume":"11017717304","TradeValue":"938222196327","Transaction":"4612433","TAIEX":"48475.74","Change":"122.25"},
+{"Date":"1151005","TradeVolume":"14490437804","TradeValue":"1211041395113","Transaction":"5843674","TAIEX":"49712.04","Chang
+== 200 276931 https://data.bis.org/topics/CREDIT_GAPS
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width, initial-scale=1" data-next-head=""/><meta name="theme-color" content="#ffffff" data-next-head=""/><title data-next-head="">Credit-to-GDP gaps - overview | BIS Data Portal</title><meta name="description" content="Corresponds to the difference between the credit-to-GDP rat
+== 200 12127 https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.C/all?format=csv
+FREQ,BORROWERS_CTY,TC_BORROWERS,TC_LENDERS,CG_DTYPE,COLLECTION,DECIMALS,UNIT_MEASURE,UNIT_MULT,TIME_FORMAT,TITLE_TS,TIME_PERIOD,OBS_VALUE,OBS_STATUS,OBS_CONF,OBS_PRE_BREAK
+Q,US,P,A,C,E,1,770,0,,,1957-Q4,0.7754,A,F,
+Q,US,P,A,C,E,1,770,0,,,1958-Q1,0.5234,A,F,
+Q,US,P,A,C,E,1,770,0,,,1958-Q2,1.0925,A,F,
+Q,US,P,A,C,E,1,770,0,,,1958-Q3,1.3479,A,F,
+
