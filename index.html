@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Bubble Monitor V4</title>
+<title>AI Bubble Monitor V4.1</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{--bg:#070a0f;--p:#101720;--line:#263244;--tx:#eef5ff;--mu:#8da0b7;--c:#34d5ef;--g:#45df8c;--y:#ffd43b;--o:#ff9f43;--r:#ff667e}
@@ -43,6 +43,8 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:-1px}
 .tag{font-size:10px;padding:2px 7px;border-radius:20px;border:1px solid var(--line);color:var(--mu);margin-left:6px;white-space:nowrap}
 .chartbox{position:relative;height:290px}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-bottom:10px}
+.basis{font-size:11px;color:var(--mu);line-height:1.45;max-width:340px}
 .legend{display:flex;flex-wrap:wrap;gap:14px;font-size:11px;color:var(--mu);margin-top:8px}
 .legend i{display:inline-block;width:18px;height:0;border-top:2px dashed;margin-right:6px;vertical-align:middle}
 .src{padding:7px 0}
@@ -59,8 +61,8 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
   <div class="top">
     <div>
       <div class="ey">AI CAPITAL CYCLE · VALUATION · MARKET STRESS</div>
-      <h1>AI Bubble Monitor <span class="mu">V4</span></h1>
-      <div class="mu">AI Demand → CapEx → OCF → FCF → Credit，加上估值／動能燈號與泡沫破裂訊號。</div>
+      <h1>AI Bubble Monitor <span class="mu">V4.1</span></h1>
+      <div class="mu">AI Demand → CapEx → OCF → FCF → Credit，加上依研究文獻訂門檻的泡沫燈號與破裂訊號。</div>
     </div>
     <div class="mu">AS OF <b id="asof"></b><div id="mktupd" style="font-size:11px;margin-top:4px"></div></div>
   </div>
@@ -91,12 +93,45 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 
   <div id="loadError" role="alert" class="card" hidden></div>
 
-  <h2>Valuation / Momentum 燈號</h2>
-  <p class="lead">達「過熱」為紅、達「警戒」為黃。標示「自動」者由每日行情計算；其餘為人工查證，附來源與資料日。燈號平均即 Valuation / Momentum 支柱分數。</p>
-  <div class="tbl"><table>
-    <thead><tr><th>燈號</th><th>指標</th><th>讀數</th><th>門檻（警戒／過熱）</th><th>資料日</th><th>來源</th></tr></thead>
+  <h2>Bubble Signals · 研究依據的燈號</h2>
+  <p class="lead">每個燈號的門檻都來自文獻或該序列自身的歷史分位數，「依據」欄寫明出處。達「過熱」為紅、達「警戒」為黃。四組分數依證據強度加權（價格急漲與爆炸性 35%、信用與槓桿 30%、投資熱潮與發行 20%、估值 15%），合成 Bubble Signals 支柱。</p>
+  <div class="groups" id="groups"></div>
+  <div class="tbl"><table class="wide">
+    <thead><tr><th>燈號</th><th>指標</th><th>讀數</th><th>門檻（警戒／過熱）</th><th>依據</th><th>資料日</th><th>來源</th></tr></thead>
     <tbody id="signals"></tbody>
   </table></div>
+  <p class="lead" id="blJoint" style="margin-top:10px"></p>
+
+  <h2>Observations · 觀察項（不計分）</h2>
+  <p class="lead">直覺上像泡沫訊號，但缺乏預測崩跌的實證、或沒有可校準的歷史序列，因此只列讀數。</p>
+  <div class="tbl"><table class="wide">
+    <thead><tr><th>指標</th><th>讀數</th><th>資料日</th><th>為何不計分</th><th>來源</th></tr></thead>
+    <tbody id="observations"></tbody>
+  </table></div>
+
+  <h2>Explosiveness &amp; Credit · 爆炸性與信用</h2>
+  <div class="cols">
+    <section class="card">
+      <b>費城半導體相對 S&amp;P 500：PSY 爆炸性統計量</b><div class="pwhy" id="psySoxNote"></div>
+      <div class="chartbox"><canvas id="psySoxChart"></canvas></div>
+      <div class="legend"><span><i style="border-color:#ff667e"></i>95% 臨界值</span><span><i style="border-color:#ffd43b"></i>90% 臨界值</span></div>
+    </section>
+    <section class="card">
+      <b>S&amp;P 500 價格／股利比：PSY 爆炸性統計量</b><div class="pwhy" id="psySpNote"></div>
+      <div class="chartbox"><canvas id="psySpChart"></canvas></div>
+      <div class="legend"><span><i style="border-color:#ff667e"></i>95% 臨界值</span><span><i style="border-color:#ffd43b"></i>90% 臨界值</span></div>
+    </section>
+    <section class="card">
+      <b>美國保證金融資年增率</b><div class="pwhy" id="marginNote"></div>
+      <div class="chartbox"><canvas id="marginChart"></canvas></div>
+      <div class="legend"><span><i style="border-color:#ff667e"></i>第 95 百分位</span><span><i style="border-color:#ffd43b"></i>第 80 百分位</span></div>
+    </section>
+    <section class="card">
+      <b>美國私部門信用缺口（BIS）</b><div class="pwhy" id="gapNote"></div>
+      <div class="chartbox"><canvas id="gapChart"></canvas></div>
+      <div class="legend"><span><i style="border-color:#ff667e"></i>10 個百分點</span><span><i style="border-color:#ffd43b"></i>2 個百分點</span></div>
+    </section>
+  </div>
 
   <h2>Burst Signals · 崩跌線</h2>
   <div class="cols">
@@ -122,7 +157,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
       <div class="chartbox"><canvas id="taiexChart"></canvas></div>
     </section>
     <section class="card">
-      <b>S&amp;P 500 Shiller CAPE</b><div class="pwhy">每年一月讀數加最新一筆；虛線為 1881 年以來長期平均。</div>
+      <b>S&amp;P 500 Shiller CAPE</b><div class="pwhy">每年一月讀數加最新一筆；灰虛線為 1881 年以來中位數，紅虛線為第 95 百分位。</div>
       <div class="chartbox"><canvas id="capeChart"></canvas></div>
     </section>
   </div>
@@ -149,7 +184,7 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
   </div>
 
   <div class="cols">
-    <section><h2>Automation</h2><div class="card mu" style="line-height:1.7">GitHub Actions 每個平日自動更新 QQQ、SOXX、NVDA、MSFT、AMZN、GOOGL、META、CRWV、NBIS、美國 10 年期殖利率、費城半導體指數、台股加權指數、台積電（2330、TSM），並以兩年日資料計算 GSY 超額報酬與距高點跌幅，再重算分數。基本面與人工查證的估值指標刻意不自動解析，以免錯誤數字悄悄改變分數。</div></section>
+    <section><h2>Automation</h2><div class="card mu" style="line-height:1.7">GitHub Actions 每個平日自動更新 QQQ、SOXX、NVDA、MSFT、AMZN、GOOGL、META、CRWV、NBIS、美國 10 年期殖利率、費城半導體指數、台股加權指數、台積電（2330、TSM），並以兩年日資料計算 GSY 超額報酬與距高點跌幅，再重算分數。研究指標另由 Shiller 月資料（CAPE、價格／股利比、股價缺口）、BIS 信用缺口、聯準會 Z.1 保證金帳戶與證交所融資餘額自動計算。IPO 首日報酬與資本支出占 GDP 等年度資料、以及基本面，仍以人工查證更新，以免錯誤解析悄悄改變分數。</div></section>
     <section><h2>Primary Sources</h2><div class="card" id="sources"></div></section>
   </div>
 
@@ -168,7 +203,7 @@ const why = {
   'FCF Conversion': '觀察巨額 CapEx 是否侵蝕自由現金流。分數越高代表現金流壓力越大。',
   'Credit / Leverage': '觀察負債、融資成本與利息負擔。分數越高代表信用風險越值得注意。',
   'Profitability': '觀察獲利能力能否吸收 AI 投資成本。分數越低代表獲利緩衝越強。',
-  'Valuation / Momentum': 'CAPE、集中度、漲幅與交易熱度等燈號的平均。分數越高代表估值與動能越熱。'
+  'Bubble Signals': '依文獻門檻的泡沫燈號加權平均：價格急漲與爆炸性、信用與槓桿、投資與發行、估值。分數越高代表泡沫訊號越多。'
 };
 const C = {cyan: '#34d5ef', grid: '#1c2635', tick: '#8da0b7', red: '#ff667e', ref: '#8da0b7', orange: '#ff9f43'};
 
@@ -218,18 +253,31 @@ fetch('data/scoreboard.json', {cache: 'no-store'}).then((r) => { if (!r.ok) thro
   $('burst').textContent = B.score ?? '—';
   const parts = B.parts || [];
   $('burstSummary').innerHTML = parts.length ? parts.map((p) => `${esc(p.name)} 距高點 <b>−${fmt(p.dd_pct, 1)}%</b>（崩跌門檻 −${p.crash_pct}%）`).join('<br>')
-    + '<div class="pwhy">' + (B.score >= 100 ? '跌幅已達崩跌定義。' : d.score >= 65 && B.score < 50 ? '高溫但尚未破裂。' : B.score >= 50 ? '回檔已過崩跌門檻的一半，需密切追蹤。' : '尚未出現明顯破裂訊號。') + '</div>'
+    + '<div class="pwhy">' + (B.score >= 100 ? '跌幅已達崩跌定義。' : d.score >= 65 && B.score < 50 ? '高溫但尚未破裂。' : B.score >= 50 ? '回檔已過崩跌門檻的一半，需密切追蹤。' : '尚未出現明顯破裂訊號。')
+    + (parts.some((p) => p.jst_turned) ? ` 已有市場自高點回落逾 ${B.jst_turn_pct}%（JST 的轉折確認）。` : '')
+    + (B.psy_sox_episode && !B.psy_sox_episode.ongoing && B.psy_sox_episode.collapsed_on ? ` 半導體相對大盤的爆炸期（${esc(B.psy_sox_episode.start)} 起）已於 ${esc(B.psy_sox_episode.collapsed_on)} 結束（PSY 日期標定）。` : '')
+    + (B.psy_sox_episode && B.psy_sox_episode.ongoing ? ` 半導體相對大盤仍處於爆炸期（${esc(B.psy_sox_episode.start)} 起）。` : '') + '</div>'
     : '等待行情資料。';
 
   $('pillars').innerHTML = d.pillars.map((x) => `<div class="card"><div class="mu">${esc(x.name)}</div><div class="pn">${x.score}</div><div class="pwhy">${why[x.name] || ''}</div></div>`).join('');
 
+  const G = R.groups || [];
+  $('groups').innerHTML = G.map((g) => `<div class="card"><div class="mu">${esc(g.name)} · ${Math.round(g.weight * 100)}%</div><div class="pn">${g.score}</div><div class="pwhy">${g.n} 個燈號</div></div>`).join('');
+  const dp = (v) => (Math.abs(v) >= 100 ? 0 : Math.abs(v) >= 10 ? 1 : 2);
+  const srcLink = (u) => isUrl(u) ? `<a href="${esc(u)}" target="_blank" rel="noopener">↗ 來源</a>` : esc(u || '');
+  let lastGroup = null;
   $('signals').innerHTML = (R.signals || []).map((s) => {
     const L = LIGHT[s.status] || LIGHT[0];
-    const src = isUrl(s.source) ? `<a href="${esc(s.source)}" target="_blank" rel="noopener">↗ 來源</a>` : esc(s.source || '');
-    return `<tr><td><span class="dot" style="background:${L.c}"></span>${L.t}</td><td>${esc(s.name)}${s.auto ? '<span class="tag">自動</span>' : ''}</td>`
-      + `<td class="num">${fmt(s.value, s.value % 1 ? 2 : 0)} ${esc(s.unit)}</td><td class="num">${fmt(s.warn, s.warn % 1 ? 1 : 0)}／${fmt(s.hot, s.hot % 1 ? 1 : 0)}</td>`
-      + `<td class="num">${esc(s.asof || '')}</td><td>${src}</td></tr>`;
-  }).join('') || '<tr><td colspan="6" class="mu">尚無燈號資料。</td></tr>';
+    let head = '';
+    if (s.group !== lastGroup) { lastGroup = s.group; const g = G.find((x) => x.id === s.group); head = `<tr><td colspan="7" class="tk" style="padding-top:18px">${esc(g ? g.name : s.group)}</td></tr>`; }
+    return head + `<tr><td><span class="dot" style="background:${L.c}"></span>${L.t}</td><td>${esc(s.name)}</td>`
+      + `<td class="num">${fmt(s.value, dp(s.value))} ${esc(s.unit)}</td><td class="num">${fmt(s.warn, dp(s.warn))}／${fmt(s.hot, dp(s.hot))}</td>`
+      + `<td><div class="basis">${esc(s.basis)}</div></td><td class="num">${esc(s.asof || '')}</td><td>${srcLink(s.source)}</td></tr>`;
+  }).join('') || '<tr><td colspan="7" class="mu">尚無燈號資料。</td></tr>';
+  const IA = R.indicators_auto || {};
+  $('blJoint').innerHTML = R.borio_lowe_joint == null ? '' : `Borio–Lowe 聯合訊號（信用缺口 ≥4 個百分點且股價缺口 ≥60%，歷史上可預測約七成五的銀行危機）：<b>${R.borio_lowe_joint ? '已觸發' : '未觸發'}</b>。目前信用缺口 ${fmt((IA.credit_gap_us || {}).value, 1)} 個百分點、股價缺口 ${fmt((IA.equity_gap || {}).value, 1)}%。`;
+  $('observations').innerHTML = (R.observations || []).map((o) => `<tr><td>${esc(o.name)}</td><td class="num">${esc(o.value)}</td><td class="num">${esc(o.asof)}</td><td class="mu">${esc(o.why_not_scored)}</td><td>${srcLink(o.source)}</td></tr>`).join('')
+    + (IA.tw_margin_balance ? `<tr><td>台股融資餘額<span class="tag">自動</span></td><td class="num">${fmt(IA.tw_margin_balance.value, 0)} 億元${IA.tw_margin_balance.yoy != null ? `（年增 ${fmt(IA.tw_margin_balance.yoy, 1)}%）` : ''}</td><td class="num">${esc(IA.tw_margin_balance.asof)}</td><td class="mu">缺乏長期分位數資料；需搭配占市值比重解讀</td><td>${srcLink(IA.tw_margin_balance.source)}</td></tr>` : '');
 
   const A = R.auto || {}, S = R.series || {};
   const ddNote = (dd, crash) => dd ? `高點 ${fmt(dd.peak, 0)}（${esc(dd.peak_date)}）· 最新 ${fmt(dd.last, 0)}（${esc(dd.last_date)}）· 距高點 −${fmt(dd.dd_pct, 1)}%，崩跌線 ${fmt(dd.peak * (1 - crash / 100), 0)}` : '';
@@ -270,15 +318,38 @@ fetch('data/scoreboard.json', {cache: 'no-store'}).then((r) => { if (!r.ok) thro
                y: {type: 'logarithmic', grid: {color: C.grid}, ticks: {color: C.tick, callback: (v) => [1000, 2000, 5000, 10000, 20000, 50000].includes(v) ? fmt(v) : null}}}})});
   }
 
-  const cape = R.cape_history || [];
+  const capeInfo = IA.cape || {};
+  const cape = ((IA.cape_chart || {}).series || R.cape_history || []).map(([s, v]) => [s.length === 7 ? s + '-01' : s, v]);
   if (cape.length) {
-    const pts = cape.map(([s, v]) => ({x: yearOf(s), y: v, d: s}));
-    const mean = R.cape_long_run_mean;
+    const pts = cape.map(([s, v]) => ({x: yearOf(s), y: v, d: s.slice(0, 7)}));
+    const hline = (v, color) => ({data: [{x: pts[0].x, y: v}, {x: pts[pts.length - 1].x, y: v}], showLine: true, borderColor: color, borderDash: [5, 5], borderWidth: 1.25, pointRadius: 0, pointHitRadius: 0});
     const ds = [{data: pts, showLine: true, borderColor: C.cyan, backgroundColor: C.cyan, borderWidth: 2, pointRadius: 0, pointHoverRadius: 4}];
-    if (mean) ds.push({data: [{x: pts[0].x, y: mean}, {x: pts[pts.length - 1].x, y: mean}], showLine: true, borderColor: C.ref, borderDash: [5, 5], borderWidth: 1.25, pointRadius: 0, pointHitRadius: 0});
+    const med = capeInfo.median ?? R.cape_long_run_mean;
+    if (med) ds.push(hline(med, C.ref));
+    if (capeInfo.p95) ds.push(hline(capeInfo.p95, C.red));
     new Chart($('capeChart'), {type: 'scatter', data: {datasets: ds}, options: baseOptions({plugins: {legend: {display: false}, tooltip: {filter: (i) => i.datasetIndex === 0, callbacks: {label: (c) => `${c.raw.d}：CAPE ${c.raw.y}`}}},
       scales: {x: {type: 'linear', grid: {color: C.grid}, ticks: {color: C.tick, callback: (v) => Math.round(v)}}, y: {min: 0, grid: {color: C.grid}, ticks: {color: C.tick}}}})});
   }
+
+  // PSY BSADF statistic charts and credit charts
+  const statChart = (canvas, rows, lines, fmtY) => {
+    if (!rows || rows.length < 2) return empty(canvas, '等待 GitHub Actions 下一次更新後顯示');
+    const ds = [{data: rows.map((r) => r[1]), borderColor: C.cyan, borderWidth: 2, pointRadius: 0, tension: 0}];
+    lines.forEach(([v, color]) => { if (v != null) ds.push(refLine(rows, v, color)); });
+    new Chart(canvas, {type: 'line', data: {labels: rows.map((r) => r[0]), datasets: ds},
+      options: baseOptions({plugins: {legend: {display: false}, tooltip: {filter: (i) => i.datasetIndex === 0, callbacks: {label: (c) => fmtY(c.parsed.y)}}},
+        scales: {x: {grid: {color: C.grid}, ticks: {color: C.tick, maxTicksLimit: 6}}, y: {grid: {color: C.grid}, ticks: {color: C.tick}}}})});
+  };
+  const ps = IA.psy_sox_rel, pp = IA.psy_sp500_pd, mg = IA.margin_yoy_us, cg = IA.credit_gap_us;
+  const epi = (p) => !p || !p.last_episode ? '近期未出現爆炸期。' : p.last_episode.ongoing ? `目前處於爆炸期：${esc(p.last_episode.start)} 起，峰值 ${p.last_episode.peak_stat}（${esc(p.last_episode.peak_date)}）。` : `最近一次爆炸期：${esc(p.last_episode.start)} 至 ${esc(p.last_episode.last_above)}，峰值 ${p.last_episode.peak_stat}（${esc(p.last_episode.peak_date)}），${esc(p.last_episode.collapsed_on)} 跌破臨界值。`;
+  if (ps) $('psySoxNote').innerHTML = `最新 ${ps.stat}（${esc(ps.last_date)}）；臨界值 90% ${ps.cv90}、95% ${ps.cv95}。` + epi(ps);
+  if (pp) $('psySpNote').innerHTML = `最新 ${pp.stat}（${esc(pp.last_date)}）；臨界值 90% ${pp.cv90}、95% ${pp.cv95}。` + epi(pp) + ' 圖中 1997–2000 年的高點即網路泡沫。';
+  if (mg) $('marginNote').innerHTML = `最新 ${fmt(mg.value, 1)}%（${esc(mg.asof.slice(0, 7))}），${esc(mg.since.slice(0, 4))} 年以來第 ${mg.pct} 百分位。1990 年以來超過第 95 百分位的年份：${[...new Set(mg.history.filter(([, v]) => v >= mg.p95).map(([d]) => d.slice(0, 4)))].join('、') || '無'}。`;
+  if (cg) $('gapNote').innerHTML = `最新 ${fmt(cg.value, 1)} 個百分點（${esc(cg.asof)}）；歷史高點 ${fmt(cg.peak, 1)}（${esc(cg.peak_q)}），即金融海嘯前。`;
+  statChart($('psySoxChart'), ps && ps.series, ps ? [[ps.cv95, C.red], [ps.cv90, '#ffd43b']] : [], (v) => 'BSADF ' + v.toFixed(2));
+  statChart($('psySpChart'), pp && pp.series, pp ? [[pp.cv95, C.red], [pp.cv90, '#ffd43b']] : [], (v) => 'BSADF ' + v.toFixed(2));
+  statChart($('marginChart'), mg && mg.history.map(([d, v]) => [d.slice(0, 7), v]), mg ? [[mg.p95, C.red], [mg.p80, '#ffd43b']] : [], (v) => '年增 ' + v.toFixed(1) + '%');
+  statChart($('gapChart'), cg && cg.history, [[10, C.red], [2, '#ffd43b']], (v) => v.toFixed(1) + ' 個百分點');
 
   const cr = R.capex_revenue || [];
   if (cr.length) {

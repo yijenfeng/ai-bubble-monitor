@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/update_market.py'
       - 'scripts/recalculate.py'
+      - 'scripts/research_indicators.py'
       - '.github/workflows/refresh.yml'
   workflow_dispatch:
 permissions:
@@ -21,6 +22,7 @@ jobs:
           python-version: '3.12'
       - run: pip install yfinance
       - run: python scripts/update_market.py
+      - run: python scripts/research_indicators.py
       - run: python scripts/recalculate.py
       - run: |
           git config user.name "ai-bubble-monitor-bot"
