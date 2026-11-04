@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-03",
+  "as_of": "2026-11-04",
   "version": "V4.1",
   "score": 60,
   "status": "WATCH",
@@ -126,87 +126,87 @@
   "market": [
     {
       "ticker": "QQQ",
-      "price": 681.09,
-      "day_pct": -1.36,
-      "drawdown_52w_pct": -10.34
+      "price": 685.28,
+      "day_pct": 0.62,
+      "drawdown_52w_pct": -9.79
     },
     {
       "ticker": "SOXX",
-      "price": 453.65,
-      "day_pct": -3.79,
-      "drawdown_52w_pct": -30.74
+      "price": 465.0,
+      "day_pct": 2.5,
+      "drawdown_52w_pct": -29.01
     },
     {
       "ticker": "NVDA",
-      "price": 202.06,
-      "day_pct": -1.26,
-      "drawdown_52w_pct": -15.54
+      "price": 206.69,
+      "day_pct": 2.29,
+      "drawdown_52w_pct": -13.61
     },
     {
       "ticker": "MSFT",
-      "price": 507.12,
-      "day_pct": -2.83,
-      "drawdown_52w_pct": -6.69
+      "price": 520.99,
+      "day_pct": 2.74,
+      "drawdown_52w_pct": -4.13
     },
     {
       "ticker": "AMZN",
-      "price": 245.63,
-      "day_pct": 2.2,
-      "drawdown_52w_pct": -13.52
+      "price": 250.69,
+      "day_pct": 2.06,
+      "drawdown_52w_pct": -11.74
     },
     {
       "ticker": "GOOGL",
-      "price": 278.99,
-      "day_pct": -0.3,
-      "drawdown_52w_pct": -30.71
+      "price": 280.03,
+      "day_pct": 0.37,
+      "drawdown_52w_pct": -30.45
     },
     {
       "ticker": "META",
-      "price": 606.73,
-      "day_pct": -1.34,
-      "drawdown_52w_pct": -21.97
+      "price": 621.03,
+      "day_pct": 2.36,
+      "drawdown_52w_pct": -20.13
     },
     {
       "ticker": "CRWV",
-      "price": 50.15,
-      "day_pct": -8.6,
-      "drawdown_52w_pct": -63.65
+      "price": 53.74,
+      "day_pct": 7.16,
+      "drawdown_52w_pct": -61.05
     },
     {
       "ticker": "NBIS",
-      "price": 141.39,
-      "day_pct": -8.27,
-      "drawdown_52w_pct": -50.68
+      "price": 151.64,
+      "day_pct": 7.25,
+      "drawdown_52w_pct": -47.11
     },
     {
       "ticker": "^TNX",
-      "price": 4.89,
-      "day_pct": -0.71,
-      "drawdown_52w_pct": -7.85
+      "price": 4.95,
+      "day_pct": 1.19,
+      "drawdown_52w_pct": -6.76
     },
     {
       "ticker": "^SOX",
-      "price": 10328.33,
-      "day_pct": -3.37,
-      "drawdown_52w_pct": -29.43
+      "price": 10600.4,
+      "day_pct": 2.63,
+      "drawdown_52w_pct": -27.57
     },
     {
       "ticker": "^TWII",
-      "price": 44022.86,
-      "day_pct": -2.0,
-      "drawdown_52w_pct": -11.64
+      "price": 43261.12,
+      "day_pct": -0.11,
+      "drawdown_52w_pct": -13.17
     },
     {
       "ticker": "2330.TW",
-      "price": 2320.0,
-      "day_pct": -0.43,
-      "drawdown_52w_pct": -10.25
+      "price": 2290.0,
+      "day_pct": -0.22,
+      "drawdown_52w_pct": -11.41
     },
     {
       "ticker": "TSM",
-      "price": 398.63,
-      "day_pct": -1.85,
-      "drawdown_52w_pct": -17.94
+      "price": 404.8,
+      "day_pct": 1.55,
+      "drawdown_52w_pct": -16.67
     }
   ],
   "history": [
@@ -280,6 +280,11 @@
       "date": "2026-11-03",
       "score": 60,
       "burst": 66
+    },
+    {
+      "date": "2026-11-04",
+      "score": 60,
+      "burst": 68
     }
   ],
   "sources": [
@@ -332,37 +337,33 @@
       "url": "https://www.nber.org/papers/w21486"
     }
   ],
-  "market_updated_utc": "2026-11-03T03:38:37.589439+00:00",
+  "market_updated_utc": "2026-11-04T02:35:19.834323+00:00",
   "research": {
     "note": "indicators 為人工查證（附來源與資料日）；auto 與 series 由 GitHub Actions 每個平日自動更新。",
     "auto": {
       "sox_drawdown": {
         "peak": 14634.72,
         "peak_date": "2026-06-22",
-        "last": 10328.33,
-        "last_date": "2026-11-02",
-        "dd_pct": 29.4
+        "last": 10600.4,
+        "last_date": "2026-11-03",
+        "dd_pct": 27.6
       },
-      "sox_2y_return_pct": 107.6,
-      "spx_2y_return_pct": 32.0,
-      "sox_2y_excess_pct": 75.6,
+      "sox_2y_return_pct": 113.1,
+      "spx_2y_return_pct": 32.5,
+      "sox_2y_excess_pct": 80.6,
       "window_start": "2024-11-04",
       "twii_drawdown": {
         "peak": 49822.55,
         "peak_date": "2026-10-06",
-        "last": 44022.86,
-        "last_date": "2026-11-03",
-        "dd_pct": 11.6
+        "last": 43261.12,
+        "last_date": "2026-11-04",
+        "dd_pct": 13.2
       },
-      "twii_2y_return_pct": 91.7,
-      "updated_utc": "2026-11-03T03:38:37.589098+00:00"
+      "twii_2y_return_pct": 88.4,
+      "updated_utc": "2026-11-04T02:35:19.834019+00:00"
     },
     "series": {
       "SOX": [
-        [
-          "2025-10-21",
-          6839.27
-        ],
         [
           "2025-10-22",
           6677.57
@@ -1398,13 +1399,13 @@
         [
           "2026-11-02",
           10328.33
+        ],
+        [
+          "2026-11-03",
+          10600.4
         ]
       ],
       "TWII": [
-        [
-          "2025-10-03",
-          26761.06
-        ],
         [
           "2025-10-07",
           27211.95
@@ -2439,7 +2440,11 @@
         ],
         [
           "2026-11-03",
-          44022.86
+          43307.54
+        ],
+        [
+          "2026-11-04",
+          43261.12
         ]
       ]
     },
@@ -2865,31 +2870,31 @@
       }
     ],
     "burst": {
-      "score": 66,
+      "score": 68,
       "parts": [
         {
           "id": "sox_drawdown",
           "name": "費城半導體指數",
-          "dd_pct": 29.4,
+          "dd_pct": 27.6,
           "crash_pct": 40,
           "peak": 14634.72,
           "peak_date": "2026-06-22",
-          "last": 10328.33,
-          "last_date": "2026-11-02",
+          "last": 10600.4,
+          "last_date": "2026-11-03",
           "jst_turned": true,
-          "progress": 74
+          "progress": 69
         },
         {
           "id": "twii_drawdown",
           "name": "台股加權指數",
-          "dd_pct": 11.6,
+          "dd_pct": 13.2,
           "crash_pct": 20,
           "peak": 49822.55,
           "peak_date": "2026-10-06",
-          "last": 44022.86,
-          "last_date": "2026-11-03",
+          "last": 43261.12,
+          "last_date": "2026-11-04",
           "jst_turned": false,
-          "progress": 58
+          "progress": 66
         }
       ],
       "jst_turn_pct": 15,
@@ -3169,7 +3174,7 @@
         "id": "psy_sox",
         "group": "price",
         "name": "費城半導體相對 S&P 500 爆炸性（BSADF）",
-        "value": 0.59,
+        "value": 0.653,
         "warn": 0.474,
         "hot": 0.766,
         "unit": "",
@@ -3183,11 +3188,11 @@
         "id": "gsy_sox",
         "group": "price",
         "name": "費城半導體兩年報酬（扣 S&P 500）",
-        "value": 75.6,
+        "value": 80.6,
         "warn": 100,
         "hot": 150,
         "unit": "%",
-        "asof": "2026-11-02",
+        "asof": "2026-11-03",
         "basis": "GSY (2019)：≥100% 時兩年內崩跌機率 53%，≥150% 時 80%",
         "source": "Yahoo Finance via yfinance（自動）",
         "status": 0
@@ -3327,7 +3332,7 @@
         "median": 16.61,
         "since": "1881-01",
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-11-03T03:38:38.143067+00:00"
+        "updated_utc": "2026-11-04T02:35:20.657408+00:00"
       },
       "psy_sp500_pd": {
         "label": "S&P 500 價格／股利比（月，1871 起）",
@@ -4789,7 +4794,7 @@
           ]
         ],
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-11-03T03:38:38.143067+00:00"
+        "updated_utc": "2026-11-04T02:35:20.657408+00:00"
       },
       "equity_gap": {
         "value": 27.9,
@@ -5038,7 +5043,7 @@
         ],
         "method": "實質 S&P 500（Shiller CPI 平減）年平均，當年以最新月份代入；單邊 HP 濾波 λ=1600，至少 20 年資料",
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-11-03T03:38:38.143067+00:00"
+        "updated_utc": "2026-11-04T02:35:20.657408+00:00"
       },
       "credit_gap_us": {
         "value": -11.32,
@@ -5628,7 +5633,7 @@
           ]
         ],
         "source": "https://stats.bis.org/api/v1/data/WS_CREDIT_GAP/Q.US.P.A.C/all?format=csv",
-        "updated_utc": "2026-11-03T03:38:38.670797+00:00"
+        "updated_utc": "2026-11-04T02:35:21.235776+00:00"
       },
       "margin_yoy_us": {
         "value": 46.6,
@@ -6225,11 +6230,11 @@
           ]
         ],
         "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=BOGZ1FL663067003Q",
-        "updated_utc": "2026-11-03T03:38:38.925849+00:00"
+        "updated_utc": "2026-11-04T02:35:21.611652+00:00"
       },
       "psy_sox_rel": {
         "label": "費城半導體／S&P 500 價格比（週）",
-        "stat": 0.59,
+        "stat": 0.653,
         "cv90": 0.474,
         "cv95": 0.766,
         "T": 1697,
@@ -7283,19 +7288,19 @@
           ],
           [
             "2026-11-02",
-            0.59
+            0.653
           ]
         ],
         "source": "Yahoo Finance via yfinance（^SOX、^GSPC 週收盤）",
-        "updated_utc": "2026-11-03T03:38:39.759585+00:00"
+        "updated_utc": "2026-11-04T02:35:22.769970+00:00"
       },
       "tw_margin_balance": {
-        "value": 6227.0,
-        "asof": "2026-11-02",
+        "value": 5997.7,
+        "asof": "2026-11-03",
         "unit": "億元",
         "source": "https://www.twse.com.tw/zh/trading/margin/mi-margn.html",
-        "yoy": 106.4,
-        "updated_utc": "2026-11-03T03:38:53.165753+00:00"
+        "yoy": 97.1,
+        "updated_utc": "2026-11-04T02:35:29.685550+00:00"
       },
       "cape_chart": {
         "series": [
@@ -7453,7 +7458,7 @@
           ]
         ],
         "source": "https://www.thetrading.tools/data/indicators/shiller-cape.csv",
-        "updated_utc": "2026-11-03T03:38:38.143067+00:00"
+        "updated_utc": "2026-11-04T02:35:20.657408+00:00"
       }
     },
     "indicators_auto_status": {
